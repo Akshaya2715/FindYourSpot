@@ -1,0 +1,71 @@
+/* src/pages/Acknowledge.css */
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #ffffff);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+  }
+  
+  .ack-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border-top: 5px solid #3b82f6;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .ack-box h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .ack-box p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* ✅ Success */
+  .success {
+    border-top-color: #22c55e;
+    background: #f0fdf4;
+    color: #166534;
+  }
+  
+  /* ❌ Failure */
+  .error {
+    border-top-color: #ef4444;
+    background: #fef2f2;
+    color: #991b1b;
+  }
+  
+  /* ⚠️ Verifying */
+  .pending {
+    border-top-color: #facc15;
+    background: #fefce8;
+    color: #92400e;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

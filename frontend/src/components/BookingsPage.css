@@ -1,0 +1,132 @@
+/* src/components/BookingsPage.css */
+
+.bookings-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bookings-container h2 {
+    text-align: center;
+    color: #e74c3c;
+    /* red theme */
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.filters input:focus,
+.filters select:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 4px #e74c3c;
+}
+
+.filters button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters button:hover {
+    background-color: #c0392b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead tr {
+    background-color: #e74c3c;
+    /* red header */
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ffe6e6;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    color: #333;
+}
+
+td:first-child {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #e74c3c;
+    }
+}

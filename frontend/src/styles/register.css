@@ -1,0 +1,35 @@
+/* src/styles/register.css */
+@import url("./login.css"); /* reuse tokens + base styles */
+
+/* Override bg to subtly differentiate register */
+.auth-wrap.register-bg{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(60% 60% at 20% 20%, rgba(255,255,255,0.05), transparent 60%),
+    radial-gradient(50% 50% at 80% 30%, rgba(255,255,255,0.04), transparent 60%),
+    url("../assets/bg.png") center/cover no-repeat fixed;
+}
+
+/* tagline style */
+.tagline {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 800;
+  background: linear-gradient(135deg,#4facfe,#00f2fe,#ff512f,#dd2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.agree{
+  margin-top:2px;
+  display:flex; gap:10px; align-items:center;
+  color: var(--muted);
+}
+.agree.has-error{ color: var(--error); }

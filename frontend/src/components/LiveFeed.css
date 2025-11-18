@@ -1,0 +1,42 @@
+/* src/components/LiveFeed.css */
+
+.live-feed-page {
+  padding: 20px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.live-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-feed {
+  border: 3px solid #444;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.video-feed {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;   /* container ku full width fit */
+  max-height: 80vh;  /* screen ku height fit */
+  object-fit: contain; /* video distort aagama fit aagum */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+

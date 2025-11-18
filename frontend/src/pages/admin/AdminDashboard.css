@@ -1,0 +1,539 @@
+/* Reset & Basic */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3640;
+  padding: 15px 40px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Center Navigation */
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li button,
+.nav-links li a {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li button:hover,
+.nav-links li a:hover {
+  color: #0984e3;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.profile-btn:hover {
+  transform: scale(1.1);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 15px;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+.profile-container:hover .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* Banner */
+.dashboard-banner {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+.dashboard-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.dashboard-banner img:hover {
+  transform: scale(1.05);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.banner-text p {
+  font-size: 1.3rem;
+  margin-top: 12px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.dashboard-banner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  top: 0;
+  left: 0;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Cards - Horizontal Scroll */
+.card-container {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background: #0984e3;
+  border-radius: 4px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: #dfe6e9;
+  border-radius: 4px;
+}
+
+.card {
+  min-width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #2f3640;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #636e72;
+}
+
+/* Buttons */
+.btn {
+  background-color: #0984e3;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 12px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #74b9ff;
+  transform: translateY(-2px);
+}
+
+/* Slot Monitor */
+.slot-monitor {
+  margin-top: 50px;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.slot {
+  background: #dfe6e9;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slot.free {
+  background: #55efc4;
+  color: #2d3436;
+}
+
+.slot.occupied {
+  background: #ff7675;
+  color: #fff;
+}
+
+/* Popups */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup-box h2 {
+  margin-top: 0;
+  color: #2f3640;
+}
+
+.btn-close {
+  margin-top: 20px;
+  background-color: #d63031;
+}
+
+/* Form Inputs */
+.book-slot-form div {
+  margin-bottom: 15px;
+}
+
+.book-slot-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.book-slot-form input,
+.book-slot-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #2d3436;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+/* ---------------- Table Wrapper ---------------- */
+.booking-table-wrapper {
+  overflow-x: visible; /* disable horizontal scroll */
+  width: 100%; /* take full popup width */
+  max-width: 700px; /* increase container width */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+}
+
+/* ---------------- Table ---------------- */
+.booking-table {
+  width: 100%; /* table takes full container width */
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Table Header */
+.booking-table th {
+  background-color: #d63031; /* red branding */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  border-bottom: 2px solid #c23616;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Table Rows */
+.booking-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dcdde1;
+  font-size: 0.95rem;
+  color: #2f3640;
+  text-align: center;
+}
+
+/* Alternate Row Colors */
+.booking-table tbody tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.booking-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Hover Effect */
+.booking-table tbody tr:hover {
+  background-color: #f1f2f6;
+  transition: background 0.2s;
+}
+
+/* Left-align Name, Spot, Area columns */
+.booking-table td:first-child,
+.booking-table th:first-child,
+.booking-table td:nth-child(4),
+.booking-table th:nth-child(4),
+.booking-table td:nth-child(5),
+.booking-table th:nth-child(5) {
+  text-align: left;
+}
+
+/* Slot Styling */
+.slot-free {
+  background-color: #55efc4;
+  color: #2d3436;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.slot-booked {
+  background-color: #ff7675;
+  color: #fff;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+/* Area Tags */
+.area-chennai, .area-kochin, .area-bangalore {
+  font-weight: 500;
+  color:black;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* Filters Container */
+.view-bookings-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.view-bookings-filters input,
+.view-bookings-filters select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.view-bookings-filters .reset-btn {
+  background-color: #b2bec3;
+}
+
+/* Table Wrapper */
+.view-bookings-table-wrapper {
+  max-height: 400px; /* makes table scrollable */
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Table */
+.view-bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.view-bookings-table th {
+  background-color: #d63031;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.view-bookings-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.view-bookings-table tbody tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.view-bookings-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.view-bookings-table tbody tr:hover {
+  background-color: #f1f2f6;
+  transition: background 0.2s;
+}
+
+/* Left align Name, Spot, Area */
+.view-bookings-table td:first-child,
+.view-bookings-table th:first-child,
+.view-bookings-table td:nth-child(4),
+.view-bookings-table th:nth-child(4),
+.view-bookings-table td:nth-child(5),
+.view-bookings-table th:nth-child(5) {
+  text-align: left;
+}
+
+/* Slot & Area Tags */
+.slot-free {
+
+  color: #2d3436;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.slot-booked {
+  background-color: #ff7675;
+  color: #fff;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.area-chennai {
+  background-color: #0984e3;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.area-kochin {
+  color: black;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.area-bangalore {
+  color: black;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
